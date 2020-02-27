@@ -1,0 +1,486 @@
+.Chart_11 {
+    width: 100%;
+    height: 4200px;
+    color: grey;
+    font-family: "andale mono";
+    position: absolute;
+    top: 0px;
+    font-size: 40px;
+    background: white;
+
+    .Fixed_Key {
+        width: 100%;
+        height: $NAV_HEIGHT;
+        background: black;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        .Key{
+            color: lightgrey;
+            height: 80px;
+            width: auto;
+            line-height: 80px;
+            position: absolute;
+            top: 0px;
+            font-size: 28px;
+            .Key#Dec{
+                left: 120px;
+            }
+            .Key#Bin{
+                left: 320px;
+            }
+            .Key#Pat{
+                left: 730px;
+            }
+            .Key#Line{
+                left: 1130px;
+            }
+            .Key#Hex{
+                left: 1500px;
+            }
+        }
+    }
+    .Right_Feild{
+        width: calc(50% - 100px);
+        height: 100vh;
+        position: fixed;
+        background: black;
+        top: 0px;
+        right: 0px;
+        z-index: 3;
+        .Fixed_Container {
+            width: 70%;
+            height: auto;
+            position: absolute;
+            left: 15%;
+            top: 250px;
+            display: none;
+            span {
+                font-size: 30px;
+                margin-left: 40px;
+                top: -20px;
+                width: 92%;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    .Left_Feild{
+        width: 50%;
+        height: 100vh;
+        background: white;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        .Chart_Container {
+            width: auto;
+            height: auto;
+            margin-right: $BLOCK;
+            position: relative;
+            float: left;
+            .Binary_chart {
+                width: calc(#{$BLOCK} * 7);
+                border: 1px solid dimgrey;
+            }
+        }
+    }
+}
+
+.Binary_chart {
+    width: calc(#{$BLOCK} * 7);
+    height: auto;
+    color: red;
+    position: relative;
+    float: left;
+    &:hover {
+        border: 1px solid tomato;
+    }
+    .biBlock {
+        @include block;
+    }
+    #chart_03 & {
+        .biBlock {
+            &.yang {
+                background: white;
+                .line_00{
+                    height: 75%;
+                    width: 4px;
+                    background: black;
+                    position: absolute;
+                    top: 15%;
+                    margin-left: 50%;
+                    left: -2px;
+                }
+            }
+            &.yin {
+                background: gainsboro;
+                 .line_01 {
+                    height: calc(#{BLOCK}/5);
+                    width: calc(#{BLOCK}/3);
+                    margin-left: calc(#{BLOCK}/4 );
+                    background: black;
+                    position: absolute;
+                    top: 15%;
+                    margin-bottom: 5%;
+                    left: -2px;
+                }
+                .line_02{
+                    height: calc(#{BLOCK}/5);
+                    width: calc(#{BLOCK}/3);
+                    margin-left: calc(#{BLOCK}/4 );
+                    background: black;
+                    position: absolute;
+                    top: 55%;
+                    left: -2px;
+                }
+            }
+        }
+    }
+}
+
+.Chart_11 span {
+    width: 100%;
+    position: absolute;
+    top: -80px;
+    &.t_01{
+        left: -100px;
+    }
+    &.t_02{
+        left: 0px;
+    }
+    &.t_03{
+        left: 0px;
+    }
+    &.t_04{
+        left: 200px;
+    }
+}
+
+.Decimal_chart {
+    width: $BLOCK;
+    margin-right: $BLOCK;
+    color: red;
+    position: relative;
+    float: left;
+    margin-top: -0.5px;
+    .decBlock {
+        @include block;
+        .arrow-right {
+            left: 60px;
+            position: absolute;
+            top: 0px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 29px 0 29px 15px;
+            border-color: transparent transparent transparent transparent;
+            &:hover {
+                color: tomato;
+             }
+        }
+    }
+}
+
+
+.Chart_11 .Chart_01 {
+    display: none;
+    // -webkit-transform: scale(3);
+    // transform: scale(3);
+}
+
+.Chart_11 .input_Container {
+    top: -280px;
+    width: 200px;
+    height: 100px;
+    background: transparent;
+    position: absolute;
+    left: -100px;
+    margin-left: 50%;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.Chart_11 .input_Feild {
+    width: 100px;
+    height: 100px;
+    color: grey;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 350px;
+    left: -50px;
+    margin-left: 50%;
+    text-align: center;
+}
+
+.Chart_11 .input_Feild:hover {
+    color: tomato;
+}
+
+.Chart_11 .input_Button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: grey;
+    color: grey;
+    text-align: center;
+    line-height: 80px;
+    position: absolute;
+    top: 460px;
+    left: -40px;
+    margin-left: 50%;
+}
+
+.Chart_11 .input_Button:hover {
+    background: tomato;
+}
+
+
+
+
+
+
+
+.Chart_11 .Chart_10{
+    width: 100%;
+    height: 4200px;
+    background: 0px;
+}
+
+.Chart_11 .Chart_10 .Content {
+    position: absolute;
+    width: 100%;
+    height: 4200px;
+    left: 0px;
+    background: transparent;
+}
+
+
+.Chart_11 .Chart_10 .Content .hexChart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    padding-top: 35px;
+    padding-left: 35px;
+    left: 0px;
+    top: 0px;
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock{
+    position: relative;
+    float: left;
+    width: 12%;
+    height: 120px;;
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock:hover{
+    background: transparent;
+    
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock .hexagram {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 90px;
+    
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock .hexagram .yin {
+    width: 100%;
+    height: 9.09%;
+    margin-bottom: 9.09%;
+    background: transparent;
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock .hexagram .line_01 {
+    height: 9.09%;
+    width: 40%;
+    position: absolute;
+    left: 0%;
+}
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock .hexagram .line_02 {
+    height: 9.09%;
+    width: 40%;
+    position: absolute;
+    left: 60%;
+}
+
+
+.Chart_11 .Chart_10 .Content .hexChart .hexBlock .hexagram .yang {
+    width: 100%;
+    height: 9.09%;
+    margin-bottom: 9.09%;
+    background: black;
+}
+
+.Chart_11 .Right_Feild_2{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    background: whitesmoke;
+    top: 0px;
+    left: 50%;
+}
+
+
+// .Chart_11 .Chart_Container3 {
+//     width: 750px;
+//     height: auto;
+//     position: absolute;
+//     top: 150px;
+//     left: 1130px;
+//     font-size: 30px;
+//     background: transparent;
+//     position: absolute;
+   
+// }
+
+
+
+.Vertical_Chart {
+    width: 70px;
+    background: transparent;
+    height: auto;
+    position: relative;
+    float: left;
+    .Chart_10{
+        width: 100px;
+        height: 4200px;
+        background: transparent;
+        position: absolute;
+        margin-left: 0px;
+        .Content {
+            position: absolute;
+            width:  100%;
+            height: 4200px;
+            background: transparent;
+            .hexChart {
+                position: absolute;
+                width: 100%;
+                height: 1200px;
+                left: 0px;
+                top: 0px;
+                border: 0px solid grey;
+                padding-top: 0px;
+                padding-left: 0px;
+            }
+        }
+    }
+}
+
+.Vertical_Chart .Chart_10 .Content .hexChart {
+    position: absolute;
+    width: $BLOCK;
+    height: 1200px;
+    left: 0px;
+    top: 0px;
+    border: 0px solid grey;
+    padding-top: 0px;
+    padding-left: 0px;
+    .hexBlock{
+        @include block;   
+        &:hover{
+            background: tomato;
+        }
+        .hexagram {
+            position: absolute;
+            top: 7.5px;
+            left: 7.5px;
+            width: $BLOCK;
+            height: $BLOCK;
+            .yin {
+                width: 100%;
+                height: 9.09%;
+                margin-bottom: 9.09%;
+                background: transparent;
+            }
+            .yang {
+                width: 100%;
+                height: 9.09%;
+                margin-bottom: 9.09%;
+                background: lightgrey;
+            }
+            .line_01 {
+                height: 9.09%;
+                width: 40%;
+                position: absolute;
+                left: 0%;
+            }
+            .line_02 {
+                height: 9.09%;
+                width: 40%;
+                position: absolute;
+                left: 60%;
+            }
+        }
+    }
+}
+
+.hexFeild {
+    display: none;
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1800px;
+    background: transparent;
+    .Display_Chart {
+        width: 300px;
+        height: 300px;
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        border: 1px solid transparent;
+        .lineVal{
+            width: 10%;
+            height: auto;
+            margin-bottom: 9.09%;
+            position: absolute;
+            left: -45px;
+            font-size: 20px;
+        }
+        .yin {
+            width: 100%;
+            height: 9.09%;
+            margin-bottom: 9.09%;
+            background: transparent;
+            .line_01 {
+                height: 9.09%;
+                width: 40%;
+                position: absolute;
+                left: 0%;
+                background: white;
+            }
+            .line_02 {
+                height: 9.09%;
+                width: 40%;
+                position: absolute;
+                left: 60%;
+                background: white;
+            }
+        }
+        .yang {
+            width: 100%;
+            height: 9.09%;
+            margin-bottom: 9.09%;
+            .line_00 {
+                width: 100%;
+                height: 100%;
+                background: white;
+            }
+        }
+    }
+}
+
+
+
+
+

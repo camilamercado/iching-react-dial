@@ -2,7 +2,19 @@
 @mixin midTier { z-index: 500; }
 @mixin highTier { z-index: 1000; }
 
-$NAV_HEIGHT: 70px;
+$NAV_HEIGHT: 50px;
 $PADDING_MOBILE: 60px;
 $NAV_HEIGHT_MOBILE: 50px;
 $MENU_ITEM_HEIGHT: 40px;
+
+$BLOCK: 25px;
+
+@mixin block {
+    height: $BLOCK;
+    width: $BLOCK;
+    line-height: $BLOCK;
+    text-align: center;
+    position: relative;
+    float: left;
+    font-size: 10px;
+}

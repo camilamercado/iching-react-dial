@@ -16,3 +16,10 @@ body {
   font-size: 16px;
   background: white;
 }
+
+@font-face{
+font-family: "EBG";
+src: url("fonts/EB_Garamond0.woff2") format("WOFF");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cardo');

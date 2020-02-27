@@ -1,0 +1,106 @@
+.Dial {
+	
+	height: 100vh;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	bottom: 0px;
+	font-family: "EBG";
+	
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.Dial .Page_00 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+}
+
+.Page_00, .Page_01, .Page_02 {
+	-webkit-transform: scale(0.5);
+	  transform: scale(0.5);
+	  left: 100px;
+}
+
+.button_01 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+.button_02 {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute;
+	top: 250px;
+	left: 100px;
+}
+
+.button_03 {
+	width: 100px;
+	height: 100px;
+	background: #efdc37;
+	position: absolute;
+	top: 400px;
+	left: 100px;
+}
+
+.Dial .Page_00 .Foil {
+	width: 1300px;
+    height: 1300px;
+    height: 1250px;
+    position: absolute;
+    margin-left: 50%;
+    left: -650px;
+    opacity: 1;
+    background: transparent;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.Dial .Info#left{
+	left: -300px;
+}
+
+.Dial .Info#right{
+	right: 0.5%;
+}
+
+.Dial .Info {
+	width: 20%;
+	position: absolute;
+	z-index: 0;
+}
+
+.Dial .Info h2 {
+	color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 60px;
+	font-family: "andale mono";
+	text-transform: uppercase;
+	text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 30px;
+    height: 330px;
+}
+
+
+.Dial .Info h2:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}

@@ -62,6 +62,17 @@ export default {
       filename: 'assets.json',
       path: 'build'
     }),
+    // new LoaderOptionsPlugin({
+    //     debug: true,
+    //     options: {
+    //       context: __dirname,  
+    //       output: { path :  './' }, //This has to be './' and not your output folder.
+    //       postcss: [autoprefixer],
+    //       sassLoader: {
+    //         includePaths: [path.resolve(__dirname, 'src', 'scss')]
+    //       }
+    //     }
+    //   }),
     new ExtractTextPlugin(`[name]${DEBUG ? '' : '.[hash]'}.css`),
     new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify(DEBUG ? 'development' : 'production')}),
     ...DEBUG ? [
